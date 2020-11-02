@@ -38,13 +38,14 @@ function BookList() {
   );
 }
 
-const Book = (props) => {
-  console.log(props);
+const Book = ({ img, title, author }) => {
+  // destructuring
+  // const { img, title, author } = props;
   return (
     <article className='book'>
-      <img src={props.img} alt='' />
-      <h3>{props.title}</h3>
-      <h4>{props.author}</h4>
+      <img src={img} alt='' />
+      <h3>{title}</h3>
+      <h4>{author}</h4>
     </article>
   );
 };
