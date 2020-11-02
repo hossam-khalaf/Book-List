@@ -3,22 +3,33 @@ import ReactDom from 'react-dom';
 
 // statless functional component
 // always return JSX
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <Person />
-      <Message />
-    </div>
+    <section>
+      <Book />
+    </section>
   );
 }
 
-const Person = () => <h2>Hossam Hassan</h2>;
-const Message = () => {
-  return <p>This is my message</p>;
+const Book = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Auther />
+    </article>
+  );
 };
 
-// const Greeting = () => {
-//   return React.createElement('h1', {}, 'Hello world!');
-// };
+const Image = () => (
+  <img
+    src='https://images-na.ssl-images-amazon.com/images/I/81Kc8OsbDxL._AC_UL200_SR200,200_.jpg'
+    alt=''
+  />
+);
 
-ReactDom.render(<Greeting />, document.getElementById('root'));
+const Title = () => <h3>Greenlights</h3>;
+
+const Auther = () => <h4>Matthew McConaughey</h4>;
+
+ReactDom.render(<BookList />, document.getElementById('root'));
