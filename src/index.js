@@ -10,9 +10,6 @@ function BookList() {
   return (
     <section className='booklist'>
       <Book />
-      <Book />
-      <Book />
-      <Book />
     </section>
   );
 }
@@ -20,22 +17,14 @@ function BookList() {
 const Book = () => {
   return (
     <article className='book'>
-      <Image />
-      <Title />
-      <Auther />
+      <img
+        src='https://images-na.ssl-images-amazon.com/images/I/81Kc8OsbDxL._AC_UL200_SR200,200_.jpg'
+        alt=''
+      />
+      <h3>Greenlights</h3>
+      <h4>Matthew McConaughey</h4>
     </article>
   );
 };
-
-const Image = () => (
-  <img
-    src='https://images-na.ssl-images-amazon.com/images/I/81Kc8OsbDxL._AC_UL200_SR200,200_.jpg'
-    alt=''
-  />
-);
-
-const Title = () => <h3>Greenlights</h3>;
-
-const Auther = () => <h4>Matthew McConaughey</h4>;
 
 ReactDom.render(<BookList />, document.getElementById('root'));
